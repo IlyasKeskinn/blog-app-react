@@ -114,3 +114,42 @@ ul {
   border-top: 1px dotted rgba(3, 3, 3, 0.3);
   padding: 20px 0;
 }
+
+/* aside */
+
+.widget {
+  background-color: #000;
+  color: #F7F7F7;
+  border-radius: 2px;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.about-img__wrapper {
+  height: 200px;
+}
+
+.about-img__wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aside-about p{
+  padding: 10px 0;
+  color: #555;
+  font-weight: 300;
+}
+
+.aside-social-media i {
+  font-size: 24px;
+}
+
+.tags{
+  flex-wrap: wrap;
+}
+.tag{
+  margin: 10px;
+  border: 1px solid rgba(149, 157, 165, 0.2);
+  padding: 4px;
+}

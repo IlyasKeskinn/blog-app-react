@@ -8,13 +8,12 @@ const socialIcons = [
 export const SocialIcons = () => {
     return (
         <div className="social-icons__wrapper d-flex align-items-center justify-content-between ">
-                    {
-                        socialIcons.map((socialIcon, index) => {
-                            return (
-                                <a href={socialIcon.url} className="social-icon-link" key={index}><i className={socialIcon.icons}></i></a>);
-                        })
-                    }
-
-                </div>
+            {
+                socialIcons.map((socialIcon, index) => {
+                    return (
+                        <a href={socialIcon.url} className="social-icon-link" key={index}><i className={socialIcon.icons}></i></a>);
+                })
+            }
+        </div>
     );
 }

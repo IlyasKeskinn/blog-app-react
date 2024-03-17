@@ -1,9 +1,9 @@
-import BlogList from "../../components/BlogList" 
+import BlogList from "../../components/BlogList"
 
 export const BlogPage = () => {
-    return(
-        <div>
-            <BlogList/>
+    return (
+        <div className="container">
+            <BlogList />
         </div>
     );
 }

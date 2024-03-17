@@ -7,7 +7,7 @@ export const BlogItem = ({ blog }) => {
     const shortendWords = words.slice(0, maxWords);
     const shorText = shortendWords.join(" ").concat("...");
     return (
-        <div className="post-contentCol col-lg-8 my-5">
+        <div className="post-contentCol col-lg-12 my-5">
             <article className="content">
                 <div>
                     <Link to={`/details/${blog.id}`}>
