@@ -10,32 +10,6 @@ const BlogDetailsItem = (props) => {
         props.dispatch(removeBlogToDatabase(props.blog.id));
         navigate("/blog");
     }
-
-
-    // return (
-    //     <div className="container">
-    //         <div className="card w-75 mx-auto">
-    //             <div className="card-header">
-    //                 <div className="d-flex justify-content-between">
-    //                     <h2 className="card-title">
-    //                         {
-    //                             props.blog.title
-    //                         }
-    //                     </h2>
-
-    //                 </div>
-    //             </div>
-    //             <div className="card-body">
-    //                 <p className="card-text">
-    //                     {props.blog.desc}
-    //                 </p>
-    //             </div>
-    //             <div className="card-footer">
-    //                 <button className="btn btn-danger" type="button" onClick={handleRemove}>Delete</button>
-    //             </div>
-    //         </div>
-    //     </div>
-    // );
     return (
         <div className="post-contentCol col-lg-12 my-5">
             <article className="content">
