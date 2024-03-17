@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { compose } from "redux";
 import { withRouter } from "../../path/withRouter";
-import { editBlog } from "../../actions/blogsActions";
+import { editBlogToDatabase } from "../../actions/blogsActions";
 
 const EditBlog = (props) => {
     const navigate = useNavigate();
 
     const onSubmit = (blog) => {
-        props.dispatch(editBlog(props.blog.id,blog));
+        props.dispatch(editBlogToDatabase(props.blog.id,blog));
         navigate("/blog");
     }
     return (

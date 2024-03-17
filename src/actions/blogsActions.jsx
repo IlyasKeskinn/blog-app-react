@@ -46,3 +46,10 @@ export const editBlog = (id, updates) => (
         updates
     }
 )
+export const editBlogToDatabase = (id, updates) => {
+    return (dispatch) => {
+        return database.ref(`blogs/${id}`).update(updates).then(() => {
+            dispatch(editBlog(id, updates))
+        });
+    }
+}
