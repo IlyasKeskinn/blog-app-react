@@ -31,6 +31,14 @@ export const removeBlog = (id) => (
     }
 );
 
+export const removeBlogToDatabase = (id) => {
+    return (dispatch) => {
+        return database.ref(`blogs/${id}`).remove().then(() => {
+            dispatch(removeBlog(id));
+        })
+    }
+}
+
 export const editBlog = (id, updates) => (
     {
         type: "EDIT_BLOG",

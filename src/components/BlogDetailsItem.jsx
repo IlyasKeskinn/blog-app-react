@@ -1,11 +1,11 @@
 import { connect } from "react-redux";
-import { removeBlog } from "../actions/blogsActions";
+import { removeBlogToDatabase } from "../actions/blogsActions";
 import { Link, useNavigate } from "react-router-dom";
 const BlogDetailsItem = (props) => {
     const navigate = useNavigate();
 
     const handleRemove = () => {
-        props.dispatch(removeBlog(props.blog.id));
+        props.dispatch(removeBlogToDatabase(props.blog.id));
         navigate("/blog");
     }
 
