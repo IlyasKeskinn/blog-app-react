@@ -1,3 +1,7 @@
+:root {
+  --primary: #EFA892;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,65 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  text-decoration: none;
+  color: #333 !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.mark-text{
+  color: var(--primary);
+}
+
+/* header */
+
+.logo-title{
+  font-size: 6rem;
+  font-weight: 500;
+}
+.slogan-text{
+  font-size: 1.2rem;
+}
+/* nav */
+
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 5px 2px 2px 1px rgba(240, 240, 240, 0.8);
+}
+
+.social-icons__wrapper {
+  width: 200px;
+}
+
+.social-icons__wrapper .social-icon-link:hover i {
+  color:  var(--primary);
+  transition: all 0.2s;
+}
+
+.active {
+  color: var(--primary) !important;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+
+/* carousel card */
+
+.carousel-title-bar{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 30px;
+}
+.carousel-card-text{
+  color: #ffffff;
 }

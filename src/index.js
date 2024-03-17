@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import "../node_modules/bootstrap/dist/css/bootstrap.css"
+import "../node_modules/bootstrap-icons/font/bootstrap-icons.css"
 import configureAppStore from './store/configureStore';
 import { Provider } from 'react-redux';
 import { applyMiddleware ,compose } from 'redux';
