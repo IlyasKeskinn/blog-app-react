@@ -8,7 +8,7 @@ import  BlogDetailsItem  from "../../components/BlogDetailsItem";
 
 const BlogDetails = (props) => {
     return (
-        <div className="mt-4">
+        <div className="mt-4 container">
             <BlogDetailsItem blog = {props.blog}/>
         </div>
     );
