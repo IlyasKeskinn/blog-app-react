@@ -1,6 +1,6 @@
 import BlogForm from "../../components/BlogForm";
 import { connect } from "react-redux";
-import { addBlog } from "../../actions/blogsActions"
+import { addBlogToDataBase } from "../../actions/blogsActions"
 import { useNavigate } from "react-router-dom";
 
 const NewBlog = (props) => {
@@ -8,7 +8,7 @@ const NewBlog = (props) => {
     const navigate = useNavigate();
    
     const onSubmit = (blog) => {
-        props.dispatch(addBlog(blog));
+        props.dispatch(addBlogToDataBase(blog));
         navigate("/blog")
     }
     return (

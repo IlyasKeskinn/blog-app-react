@@ -11,7 +11,7 @@ export const blogReducer = (state = blogState, action) => {
             return state.filter(({ id }) => {
                 return id !== action.id
             });
-        case "EDIT_BLOG":
+        case "EDIT_BLOG": 
             return state.map((blog) => {
                 if (blog.id === action.id) {
                     return {
