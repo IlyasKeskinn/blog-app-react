@@ -1,6 +1,29 @@
 import database from "../firebase/firebaseConfig"
 
 
+export const setBlogs = (blogs) => (
+    {
+        type: "SET_BLOGS",
+        blogs
+    }
+);
+
+export const getBlogsFromDataBase = () => {
+    return (dispatch) => {
+        database.ref("blogs").once("value").then((snapshot) => {
+            const blogs = [];
+            snapshot.forEach((blog) => {
+                blogs.push({
+                    "id": blog.key,
+                    ...blog.val()
+                });
+            })
+            console.log(blogs);
+            dispatch(setBlogs(blogs));
+        })
+    }
+}
+
 export const addBlog = (blog) => (
     {
         type: "ADD_BLOG",
@@ -52,4 +75,5 @@ export const editBlogToDatabase = (id, updates) => {
             dispatch(editBlog(id, updates))
         });
     }
-}
+};
+

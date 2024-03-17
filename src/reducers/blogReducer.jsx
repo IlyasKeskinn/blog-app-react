@@ -2,6 +2,8 @@ const blogState = [];
 
 export const blogReducer = (state = blogState, action) => {
     switch (action.type) {
+        case "SET_BLOGS":
+            return action.blogs
         case "ADD_BLOG":
             return [
                 ...state,
