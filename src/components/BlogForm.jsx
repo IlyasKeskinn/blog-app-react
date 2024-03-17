@@ -7,6 +7,7 @@ export class BlogForm extends Component {
             title : props.blog? props.blog.title : "",
             desc : props.blog? props.blog.desc : "",
             date : Date.now(),
+            img : props.blog? props.blog.img : "",
             error : null,
         }
     }
@@ -20,7 +21,8 @@ export class BlogForm extends Component {
             const blog  = {
                 title : this.state.title,
                 desc : this.state.desc,
-                date : this.state.date
+                date : this.state.date,
+                img : this.state.img
             }
             this.props.onSubmit(blog);
 
@@ -34,6 +36,10 @@ export class BlogForm extends Component {
                 <div className="my-4">
                     <label htmlFor="title">Blog Title</label>
                     <input type="text" name="title" id="title" value={this.state.title} className="form-control" onChange={(e) => this.setState({title : e.target.value})} />
+                </div>
+                <div className="my-4">
+                    <label htmlFor="img">Blog Image</label>
+                    <input type="text" name="img" id="img" value={this.state.img} className="form-control" onChange={(e) => this.setState({img : e.target.value})} />
                 </div>
                 <div className="my-4">
                     <label htmlFor="desc">Blog Desc</label>

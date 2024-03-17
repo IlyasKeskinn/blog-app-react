@@ -11,6 +11,7 @@ const BlogList = (props) => {
 }
 
 const mapStatetoProps = (state) => {
+    console.log(state);
     return {
         blogs : state.blogs
     }

@@ -1,5 +1,4 @@
 export const CarouselCard= ({post}) => {
-    console.log(post.img);
  return(
     <div className="carousel-card position-relative">
         <img className="img-fluid" alt={post.title} src={`../img/postImage/${post.img}`}></img>

@@ -18,7 +18,6 @@ export const getBlogsFromDataBase = () => {
                     ...blog.val()
                 });
             })
-            console.log(blogs);
             dispatch(setBlogs(blogs));
         })
     }
@@ -33,9 +32,8 @@ export const addBlog = (blog) => (
 
 export const addBlogToDataBase = (blogData = {}) => {
     return (dispatch) => {
-        const { title = "Title", desc = "Desc", date = 0 } = blogData;
-        const blog = { title, desc, date };
-
+        const { title = "Title", desc = "Desc", date = 0 , img = ""} = blogData;
+        const blog = { title, desc, date, img };
         database.ref("blogs").push(blog).then((response) => {
             dispatch(addBlog(
                 {

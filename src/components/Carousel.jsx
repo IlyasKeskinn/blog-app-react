@@ -24,8 +24,6 @@ export class Carousel extends React.Component {
             <Swiper
                 spaceBetween={0}
                 slidesPerView={3}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false
